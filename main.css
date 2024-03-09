@@ -1,0 +1,42 @@
+body {
+    --g-colorSchemeName: darkMode;
+    --color-text-default: white;
+    --color-text-subtle: rgb(160,160,160);
+    --color-icon-subtle: rgb(160,160,160);
+    --color-icon-default: rgb(120,120,120);
+    --color-background-default: black;
+    --color-background-box-default: black;
+    --color-background-button-secondary-default: rgb(30,30,30);
+    --color-background-button-secondary-hover: rgb(50,50,50);
+    --color-background-tabs-default-base: rgb(30,30,30);
+    --color-background-tabs-default-hover: rgb(50,50,50);
+    --color-border-popover-primary: black;
+    --color-background-popover-primary: rgb(20,20,20);
+    --color-background-box-secondary: rgb(30,30,30);
+    --color-background-overlay: rgb(30,30,30);
+    --color-background-box-darkwash: rgb(50,50,50);
+    --color-background-button-white-default: rgb(30,30,30);
+    --color-background-button-white-hover: rgb(50,50,50);
+    --color-background-formfield-primary: rgb(30,30,30);
+    --color-background-combobox-item-hover: rgb(50,50,50);
+    --color-background-tag-primary-default: rgb(20,20,20);
+    --color-text-formfield-default: white;
+    --color-background-box-warning-weak: rgb(20,20,20);
+    --color-background-box-lightwash: rgb(30,30,30);
+    --color-background-box-light: rgb(30,30,30);
+    --color-text-dark: white;
+    background-color: black;
+}
+
+body {
+    color: rgb(200,200,200);
+}
+
+input, textarea, .Jea.fev.zI7.iyn.Hsu {
+    color: white !important;
+    background-color: rgb(20,20,20) !important;
+}
+
+.Jea.MIw.QLY.Rym.ojN.p6V.zI7.iyn.Hsu {
+    background-color: rgba(255,255,255,0) !important;
+}
