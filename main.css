@@ -1,42 +1,86 @@
 body {
+    --pdt-d1: black;
+    --pdt-d2: rgb(20,20,20);
+    --pdt-d3: rgb(30,30,30);
+    --pdt-d4: rgb(50,50,50);
+    --pdt-l1: white;
+    --pdt-l2: rgb(160,160,160);
+    --pdt-l3: rgb(120,120,120);
     --g-colorSchemeName: darkMode;
-    --color-text-default: white;
-    --color-text-subtle: rgb(160,160,160);
-    --color-icon-subtle: rgb(160,160,160);
-    --color-icon-default: rgb(120,120,120);
-    --color-background-default: black;
-    --color-background-box-default: black;
-    --color-background-button-secondary-default: rgb(30,30,30);
-    --color-background-button-secondary-hover: rgb(50,50,50);
-    --color-background-tabs-default-base: rgb(30,30,30);
-    --color-background-tabs-default-hover: rgb(50,50,50);
-    --color-border-popover-primary: black;
-    --color-background-popover-primary: rgb(20,20,20);
-    --color-background-box-secondary: rgb(30,30,30);
-    --color-background-overlay: rgb(30,30,30);
-    --color-background-box-darkwash: rgb(50,50,50);
-    --color-background-button-white-default: rgb(30,30,30);
-    --color-background-button-white-hover: rgb(50,50,50);
-    --color-background-formfield-primary: rgb(30,30,30);
-    --color-background-combobox-item-hover: rgb(50,50,50);
-    --color-background-tag-primary-default: rgb(20,20,20);
-    --color-text-formfield-default: white;
-    --color-background-box-warning-weak: rgb(20,20,20);
-    --color-background-box-lightwash: rgb(30,30,30);
-    --color-background-box-light: rgb(30,30,30);
-    --color-text-dark: white;
-    background-color: black;
-}
-
-body {
+    --color-text-default: var(--pdt-l1);
+    --color-text-subtle: var(--pdt-l2);
+    --color-icon-subtle: var(--pdt-l2);
+    --color-icon-default: var(--pdt-l3);
+    --color-background-default: var(--pdt-d1);
+    --color-background-box-default: var(--pdt-d1);
+    --color-background-button-secondary-default: var(--pdt-d3);
+    --color-background-button-secondary-hover: var(--pdt-d4);
+    --color-background-tabs-default-base: var(--pdt-d3);
+    --color-background-tabs-default-hover: var(--pdt-d4);
+    --color-border-popover-primary: var(--pdt-d1);
+    --color-background-popover-primary: var(--pdt-d2);
+    --color-background-box-secondary: var(--pdt-d3);
+    --color-background-overlay: var(--pdt-d3);
+    --color-background-box-darkwash: var(--pdt-d4);
+    --color-background-button-white-default: var(--pdt-d3);
+    --color-background-button-white-hover: var(--pdt-d4);
+    --color-background-formfield-primary: var(--pdt-d3);
+    --color-background-combobox-item-hover: var(--pdt-d4);
+    --color-background-tag-primary-default: var(--pdt-d2);
+    --color-text-formfield-default: var(--pdt-l1);
+    --color-background-box-warning-weak: var(--pdt-d2);
+    --color-background-box-lightwash: var(--pdt-d3);
+    --color-background-box-light: var(--pdt-d3);
+    --color-text-dark: var(--pdt-l1);
+    background-color: var(--pdt-d1);
     color: rgb(200,200,200);
 }
 
 input, textarea, .Jea.fev.zI7.iyn.Hsu {
-    color: white !important;
-    background-color: rgb(20,20,20) !important;
+    color: var(--pdt-l1) !important;
+    background-color: var(--pdt-d2) !important;
 }
 
 .Jea.MIw.QLY.Rym.ojN.p6V.zI7.iyn.Hsu {
     background-color: rgba(255,255,255,0) !important;
+}
+
+div[data-test-id="pinrep-source-link"] {
+    background-color: var(--pdt-d3) !important;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pdt-d3); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--pdt-d4); 
+}
+
+::-moz-scrollbar {
+    width: 13px;
+}
+
+::-moz-scrollbar-track {
+  background: var(--pdt-d3); 
+}
+ 
+::-moz-scrollbar-thumb {
+  background: var(--pdt-d4); 
+}
+
+::-ms-scrollbar {
+    width: 13px;
+}
+
+::-ms-scrollbar-track {
+  background: var(--pdt-d3); 
+}
+ 
+::-ms-scrollbar-thumb {
+  background: var(--pdt-d4); 
 }
