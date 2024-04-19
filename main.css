@@ -36,7 +36,11 @@ body {
   --color-background-box-warning-weak: var(--pdt-d2);
   --color-background-box-lightwash: var(--pdt-d3);
   --color-background-box-light: var(--pdt-d3);
+  --color-background-switch-default-selected: var(--pdt-l3);
+  --color-background-switch-default-unselected: var(--pdt-d2);
   --color-text-dark: var(--pdt-l1);
+  --color-border-container: var(--pdt-d3);
+  --color-icon-dark: var(--pdt-l1);
   background-color: transparent !important;
   color: rgb(200, 200, 200);
 }
@@ -94,7 +98,7 @@ div[data-test-id="pinrep-source-link"] {
 
 /*FOLLOWING CODE WAS MADE BY FILIPERMASTER <3*/
 
-/* 'More Ideas Board' gradient fix */
+/* 'More Ideas Board' */
 div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(n + 3) {
   filter: invert(1);
 }
@@ -104,7 +108,7 @@ div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(1) {
   z-index: 1;
 }
 
-/* 'Seach Bar' hide square corner + color correction */
+/* 'Seach Bar' */
 input[data-test-id="search-box-input"] {
   background-color: transparent !important;
 }
@@ -113,23 +117,23 @@ input[data-test-id="search-box-input"] {
   background-color: var(--pdt-l3) !important;
 }
 
-/* 'Post Title' hide background */
+/* 'Post Title' */
 div[data-test-id="closeup-title"] {
   background: transparent;
 }
 
-/* 'React Button' color correction */
+/* 'React Button' */
 div[data-test-id="react-button"] > div > div {
   filter: invert(1);
 }
 
-/* 'Album Preview' color correction */
+/* 'Album Preview' */
 div[data-test-id="profile-board-card"] div,
 div[data-test-id="pwt-grid-item"] div {
   border-color: var(--pdt-d1) !important;
 }
 
-/* 'Image Search' color correction */
+/* 'Image Search' */
 div[data-test-id="shop-button"] {
   background-color: rgb(from var(--color-background-box-default) r g b / 0.9) !important;
 }
@@ -141,12 +145,33 @@ div[data-test-id="visual-search-cropper"] {
   filter: invert(.8);
 }
 
-/* 'Add Idea' color correction */
+/* 'Add Idea' */
 div[data-test-id="persistent-one-click-save"] {
   filter: invert(.9);
 }
 
-/* 'Comments' color correction */
+/* 'Comments' */
 div[data-test-id="inline-comment-composer-container"] {
   border-color: var(--pdt-l3) !important;
+}
+
+/* 'Description' */
+div[data-test-id="more-description-container"],
+div[data-test-id="less-description-container"] {
+  background-color: var(--color-background-box-default) !important;
+}
+
+/* 'Pin Creation' */
+div[data-test-id="storyboard-selector-board"] button {
+  background-color: var(--pdt-d2) !important;
+}
+
+div[data-test-id="storyboard-selector-board"] button > div:not([data-test-id="board-dropdown-placeholder"]) span {
+  color: var(--pdt-l1) !important; 
+}
+
+div:has(> div[data-test-id="editor-with-mentions"]) {
+  border-radius: var(--rounding-600);
+  color: var(--pdt-l1) !important;
+  background-color: var(--pdt-d2) !important;
 }
