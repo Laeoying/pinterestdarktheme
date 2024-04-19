@@ -37,13 +37,13 @@ body {
   --color-background-box-lightwash: var(--pdt-d3);
   --color-background-box-light: var(--pdt-d3);
   --color-text-dark: var(--pdt-l1);
-  background-color: black !important;
+  background-color: transparent !important;
   color: rgb(200, 200, 200);
 }
 
 input,
 textarea,
-.Jea.fev.zI7.iyn.Hsu {
+#searchBoxContainer > div {
   color: var(--pdt-l1) !important;
   background-color: var(--pdt-d2) !important;
 }
@@ -96,17 +96,21 @@ div[data-test-id="pinrep-source-link"] {
 
 /* 'More Ideas Board' gradient fix */
 div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(n + 3) {
-	filter: invert(1);
+  filter: invert(1);
 }
 
 div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(1) {
-	filter: invert(1);
-	z-index: 1;
+  filter: invert(1);
+  z-index: 1;
 }
 
-/* 'Seach Box' hide square corner */
+/* 'Seach Bar' hide square corner + color correction */
 input[data-test-id="search-box-input"] {
   background-color: transparent !important;
+}
+
+#searchBoxContainer > div > div:nth-child(2) {
+  background-color: var(--pdt-l3) !important;
 }
 
 /* 'Post Title' hide background */
@@ -114,7 +118,35 @@ div[data-test-id="closeup-title"] {
   background: transparent;
 }
 
-/* 'React Button' heart highlight */
+/* 'React Button' color correction */
 div[data-test-id="react-button"] > div > div {
   filter: invert(1);
+}
+
+/* 'Album Preview' color correction */
+div[data-test-id="profile-board-card"] div,
+div[data-test-id="pwt-grid-item"] div {
+  border-color: var(--pdt-d1) !important;
+}
+
+/* 'Image Search' color correction */
+div[data-test-id="shop-button"] {
+  background-color: rgb(from var(--color-background-box-default) r g b / 0.9) !important;
+}
+
+div[data-test-id="visual-search-cropper"] {
+  filter: invert(1);
+}
+.v2shadowMask {
+  filter: invert(.8);
+}
+
+/* 'Add Idea' color correction */
+div[data-test-id="persistent-one-click-save"] {
+  filter: invert(.9);
+}
+
+/* 'Comments' color correction */
+div[data-test-id="inline-comment-composer-container"] {
+  border-color: var(--pdt-l3) !important;
 }
