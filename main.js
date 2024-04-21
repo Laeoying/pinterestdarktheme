@@ -53,7 +53,7 @@ let themes = {
         light2: '#908f97',
         light3: '#76757e'
     },
-    'ark Blue': {
+    'Dark Blue': {
         dark1: '#191926',
         dark2: '#2e2e3a',
         dark3: '#454450',
