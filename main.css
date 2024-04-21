@@ -1,16 +1,9 @@
 
 html {
-  background-color: black !important;
+  background-color: var(--pdt-d1) !important;
 }
 
 body {
-  --pdt-d1: black;
-  --pdt-d2: rgb(20, 20, 20);
-  --pdt-d3: rgb(30, 30, 30);
-  --pdt-d4: rgb(50, 50, 50);
-  --pdt-l1: white;
-  --pdt-l2: rgb(160, 160, 160);
-  --pdt-l3: rgb(120, 120, 120);
   --g-colorSchemeName: darkMode;
   --color-text-default: var(--pdt-l1);
   --color-text-subtle: var(--pdt-l2);
@@ -45,8 +38,8 @@ body {
   --color-text-dark: var(--pdt-l1);
   --color-border-container: var(--pdt-d3);
   --color-icon-dark: var(--pdt-l1);
-  background-color: transparent !important;
-  color: rgb(200, 200, 200);
+  background-color: var(--pdt-d1) !important;
+  color: var(--pdt-l1);
 }
 
 
