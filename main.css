@@ -1,9 +1,62 @@
+@property --pdt-d1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: black;
+}
 
-html {
-  background-color: var(--pdt-d1) !important;
+@property --pdt-d2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgb(20, 20, 20);
+}
+
+@property --pdt-d3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgb(30, 30, 30);
+}
+
+@property --pdt-d4 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgb(50, 50, 50);
+}
+
+@property --pdt-l1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: white;
+}
+
+@property --pdt-l2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgb(160, 160, 160);
+}
+
+@property --pdt-l3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgb(120, 120, 120);
+}
+
+@property --ftr-bg {
+  syntax: '<filter>';
+  inherits: true;
+  initial-value: brightness(0);
+}
+
+@property --ftr-fg {
+  syntax: '<filter>';
+  inherits: true;
+  initial-value: brightness(8%);
 }
 
 body {
+  transition-property: --pdt-d1, --pdt-d2, --pdt-d3, --pdt-d4, --pdt-l1, --pdt-l2, --pdt-l3, --ftr-bg, --ftr-fg;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+
   --g-colorSchemeName: darkMode;
   --color-text-default: var(--pdt-l1);
   --color-text-subtle: var(--pdt-l2);
@@ -38,10 +91,17 @@ body {
   --color-text-dark: var(--pdt-l1);
   --color-border-container: var(--pdt-d3);
   --color-icon-dark: var(--pdt-l1);
+  --color-background-datepicker-container: var(--pdt-d1);
+  --elevation-datepicker: 0 0 8px rgb(from var(--pdt-l1) r g b / 10%);
+  --color-background-formfield-primary: var(--pdt-d2);
+  --elevation-floating: 0 0 8px rgb(from var(--pdt-l2) r g b / 10%);
+  --color-background-mask-wash: rgb(from var(--pdt-l1) r g b / 4%);
+  --color-text-inverse: white;
+  --color-background-button-disabled-default: var(--pdt-d3);
   background-color: var(--pdt-d1) !important;
+  z-index: 0;
   color: var(--pdt-l1);
 }
-
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -81,13 +141,8 @@ body {
 }
 
 /* More Ideas Board */
-div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(n + 3) {
-  filter: invert(1);
-}
-
-div:has(> .moreIdeasBoardRepCarousel) > div:nth-child(1) > div {
-  filter: invert(1);
-  z-index: 1;
+div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
+  filter: var(--ftr-bg, brightness(10%));
 }
 
 /* Seach Bar */
@@ -95,17 +150,13 @@ input[data-test-id="search-box-input"] {
   background-color: transparent !important;
 }
 
-#searchBoxContainer > div > div:nth-child(2) {
+#searchBoxContainer>div>div:nth-child(2) {
   background-color: var(--pdt-l3) !important;
 }
 
 /* Post */
 div[data-test-id="closeup-title"] {
   background: transparent;
-}
-
-div[data-test-id="react-button"] > div > div {
-  filter: invert(1);
 }
 
 div[data-test-id="inline-comment-composer-container"] {
@@ -121,26 +172,41 @@ div[data-test-id="less-description-container"] {
   background-color: var(--color-background-box-default) !important;
 }
 
+div:has(>div >div >[data-test-id="visual-content-container"]) {
+  box-shadow: 0 1px 20px 0 rgb(from var(--pdt-l2) r g b / 10%) !important;
+}
+
+div[data-test-id="lego-share-social-bar-auth"] button {
+  background-color: var(--pdt-d1) !important;
+}
+
 /* Album Preview */
 div[data-test-id="profile-board-card"] div,
 div[data-test-id="pwt-grid-item"] div {
   border-color: var(--pdt-d1) !important;
 }
 
-div[data-test-id="persistent-one-click-save"] {
-  filter: invert(.9);
+div[data-test-id="persistent-one-click-save"] div:has(>div >svg) {
+  background-color: var(--pdt-d2) !important;
+}
+
+div[data-test-id="pinRepSelectionBorder"]:has(svg[height="24"]) {
+  border-color: var(--pdt-d1) !important;
+}
+
+div[data-test-id="pinRepSelectionBorder"]:has(svg[height="12"]) {
+  border-color: var(--pdt-l1) !important;
+  box-shadow: var(--pdt-d1) 0px 0px 0px 3px inset !important;
 }
 
 /* Image Search */
 div[data-test-id="shop-button"] {
-  background-color: rgb(from var(--color-background-box-default) r g b / 0.9) !important;
+  background-color: rgb(from var(--color-background-box-default) r g b / 90%) !important;
 }
 
-div[data-test-id="visual-search-cropper"] {
-  filter: invert(1);
-}
-.v2shadowMask {
-  filter: invert(.8);
+div[data-test-id="visual-search-cropper"] .v2cropperHandle,
+div[data-test-id="visual-search-cropper"] .v2cropSection {
+  filter: var(--ftr-bg, brightness(20%));
 }
 
 /* Pin Creation */
@@ -148,49 +214,49 @@ div[data-test-id="storyboard-selector-board"] button {
   background-color: var(--pdt-d2) !important;
 }
 
-div[data-test-id="storyboard-selector-board"] button > div:not([data-test-id="board-dropdown-placeholder"]) span {
-  color: var(--pdt-l1) !important; 
+div[data-test-id="storyboard-selector-board"] button>div:not([data-test-id="board-dropdown-placeholder"]) span {
+  color: var(--pdt-l1) !important;
 }
 
-div:has(> div[data-test-id="editor-with-mentions"]) {
+div:has(>div[data-test-id="editor-with-mentions"]) {
   border-radius: var(--rounding-600);
   color: var(--pdt-l1) !important;
   background-color: var(--pdt-d2) !important;
 }
 
-div:has(> div[data-test-id="header-content-container"]) > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(2),
-div:has(> div[data-test-id="header-content-container"]) > div:nth-child(3) > div > div > div:nth-child(2) > div > div:nth-child(2){
-	background-color: rgba(0, 0, 0, .6) !important;
+div:has(>div[data-test-id="header-content-container"])>div:nth-child(3)>div>div>div:nth-child(2)>div:nth-child(2),
+div:has(>div[data-test-id="header-content-container"])>div:nth-child(3)>div>div>div:nth-child(2)>div>div:nth-child(2) {
+  background-color: rgb(from var(--pdt-d1) r g b / 60%) !important;
 }
 
 input,
 textarea,
-#searchBoxContainer > div {
+#searchBoxContainer>div {
   color: var(--pdt-l1) !important;
   background-color: var(--pdt-d2) !important;
 }
 
 /* Settings */
-div[data-test-id="done-button"] button > div,
-div[data-test-id="cancel-button"] button > div {
-	background-color: var(--pdt-d2) !important;
+
+div:has(>div[data-test-id="homefeed-control-message-text"]) div[role="button"]>div>div>div:nth-child(2),
+div:has(>div >div >div >div[data-test-id="pin"])>div:nth-child(2) {
+  background-color: rgb(from var(--pdt-l1) r g b / 10%) !important;
 }
 
-div:has(> div[data-test-id="homefeed-control-message-text"]) div[role="button"] > div > div > div:nth-child(2),
-div:has(> div > div > div > div[data-test-id="pin"]) > div:nth-child(2) {
-	background-color: rgb(from var(--pdt-l3) r g b / 0.2) !important;
+select option {
+  background-color: var(--pdt-d1);
 }
-
-/*div[data-test-id="homefeed-control-pin-recommendations-disabled"] {
-  background-color: rgba(255, 255, 255, 0) !important;
-}*/
 
 /* Messages */
-div:has(> div[data-test-id="send-message-to-conversation"]) > div:nth-child(2) {
+div:has(>div[data-test-id="send-message-to-conversation"])>div:nth-child(2) {
   background-color: var(--pdt-d2) !important;
 }
 
-div:has(div[data-test-id="compose-new-message-button"]) div[role="button"] > div > div > div:nth-child(2),
-div:has(div[data-test-id="compose-new-message-button"]) div[role="button"] > div > div:nth-child(2) {
-	background-color: rgb(from var(--pdt-l3) r g b / 0.2) !important;
+div[data-test-id="chat-window-container"] {
+  box-shadow: rgb(from var(--pdt-l2) r g b / 10%) -3px 4px 14px 0px !important;
+}
+
+/* Pinterest Generics */
+.T3r {
+  background: rgb(from var(--pdt-l1) r g b / 6.4%);
 }
