@@ -6,7 +6,9 @@ let themes = {
         dark4: 'rgb(50, 50, 50)',
         light1: 'white',
         light2: 'rgb(160, 160, 160)',
-        light3: 'rgb(120, 120, 120)'
+        light3: 'rgb(120, 120, 120)',
+        white_to_bg: 'brightness(0)',
+        white_to_fg: 'brightness(8%)'
     },
     'White': {
         dark1: 'white',
@@ -15,7 +17,9 @@ let themes = {
         dark4: 'rgb(210, 210, 210)',
         light1: 'black',
         light2: 'rgb(80, 80, 80)',
-        light3: 'rgb(40, 40, 40)'
+        light3: 'rgb(40, 40, 40)',
+        white_to_bg: 'brightness(100%)',
+        white_to_fg: 'brightness(94%)'
     },
     'Semi-dark Purple': {
         dark1: '#2c1f3e',
@@ -25,6 +29,8 @@ let themes = {
         light1: 'white',
         light2: '#9b93a4',
         light3: '#837a8e',
+        white_to_bg: 'sepia(100%) saturate(10000%) hue-rotate(183.3deg) brightness(37.5%) contrast(205%)',
+        white_to_fg: 'sepia(100%) saturate(10000%) hue-rotate(183.3deg) brightness(40%) contrast(181%)'
     },
     'Dark Purple': {
         dark1: '#1b1721',
@@ -33,7 +39,9 @@ let themes = {
         dark4: '#5e5b63',
         light1: 'white',
         light2: '#908e94',
-        light3: '#77747b'
+        light3: '#77747b',
+        white_to_bg: 'sepia(100%) saturate(10000%) hue-rotate(183deg) brightness(20%) contrast(123%)',
+        white_to_fg: 'sepia(100%) saturate(10000%) hue-rotate(182.5deg) brightness(24%) contrast(110.1%)'
     },
     'Dark Grey': {
         dark1: '#181818',
@@ -42,7 +50,9 @@ let themes = {
         dark4: '#5b5b5b',
         light1: 'white',
         light2: '#8f8f8f',
-        light3: '#747474'
+        light3: '#747474',
+        white_to_bg: 'brightness(9.5%)',
+        white_to_fg: 'brightness(17.5%)'
     },
     'Dark Blue': {
         dark1: '#191926',
@@ -51,20 +61,13 @@ let themes = {
         dark4: '#5d5c67',
         light1: 'white',
         light2: '#908f97',
-        light3: '#76757e'
+        light3: '#76757e',
+        white_to_bg: 'sepia(100%) saturate(10000%) hue-rotate(180deg) brightness(24.1%) contrast(136.2%)',
+        white_to_fg: 'sepia(100%) saturate(10000%) hue-rotate(180deg) brightness(28%) contrast(123%)'
     },
-    'Dark Blue': {
-        dark1: '#191926',
-        dark2: '#2e2e3a',
-        dark3: '#454450',
-        dark4: '#5d5c67',
-        light1: 'white',
-        light2: '#908f97',
-        light3: '#76757e'
-    }
 }
 
-chrome.storage.local.set({themes: themes}, function() {});
+chrome.storage.local.set({themes: themes}, function () {});
 
 function applyTheme(theme) {
     const path = document.body;
@@ -75,6 +78,8 @@ function applyTheme(theme) {
     path.style.setProperty('--pdt-l1', theme.light1);
     path.style.setProperty('--pdt-l2', theme.light2);
     path.style.setProperty('--pdt-l3', theme.light3);
+    path.style.setProperty('--ftr-bg', theme.white_to_bg || 'brightness(10%)');
+    path.style.setProperty('--ftr-fg', theme.white_to_fg || 'brightness(20%)');
 }
 
 window.onload = function () {

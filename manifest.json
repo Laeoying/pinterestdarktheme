@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Pinterest DARK THEME",
-    "version": "2.0",
+    "version": "2.1",
     "description": "Apply a different themes to Pinterest web version.",
     "author": "Iris",
     "icons": {
@@ -24,10 +24,21 @@
                 "https://*.pinterest.ru/*",
                 "https://*.pinterest.cn/*",
                 "https://*.pinterest.pt/*",
-                "https://*/pinterest.it/*",
-                "https://*/pinterest.es/*",
-                "https://*/pinterest.ca/*",
-                "https://*/pinterest.com.au/*"
+                "https://*.pinterest.it/*",
+                "https://*.pinterest.es/*",
+                "https://*.pinterest.ca/*",
+                "https://*.pinterest.com.au/*",
+                "https://*.pinterest.at/*",
+                "https://*.pinterest.ch/*",
+                "https://*.pinterest.cl/*",
+                "https://*.pinterest.co.kr/*",
+                "https://*.pinterest.com.mx/*",
+                "https://*.pinterest.dk/*",
+                "https://*.pinterest.ie/*",
+                "https://*.pinterest.net/*",
+                "https://*.pinterest.nz/*",
+                "https://*.pinterest.ph/*",
+                "https://*.pinterest.se/*"
             ],
             "css": [
                 "main.css"
