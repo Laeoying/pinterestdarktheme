@@ -1,3 +1,5 @@
+let application = typeof InstallTrigger !== 'undefined' ? browser : chrome;
+
 let themes = {
     'Black': {
         dark1: 'black',
@@ -67,7 +69,7 @@ let themes = {
     },
 }
 
-chrome.storage.local.set({themes: themes}, function () {});
+application.storage.local.set({themes: themes}, function () {});
 
 function applyTheme(theme) {
     const path = document.body;
@@ -91,7 +93,7 @@ window.onload = function () {
     }
 }
 
-chrome.runtime.onMessage.addListener(
+application.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         localStorage.setItem('pdtTheme', request.theme);
         applyTheme(themes[request.theme]);
