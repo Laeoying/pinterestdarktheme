@@ -9,6 +9,9 @@
         font-family: 'Quicksand', sans-serif;
         color: white;
         text-align: center;
+        min-width: 220px;
+        min-height: 80px;
+        padding: 5px;
     }
 
     .box {
@@ -25,15 +28,20 @@
         font-size: 1.3em;
         margin: 10px;
     }
-
+    
     .box:hover {
-        box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px 1px white;
+    }
+
+    #error {
+        display: none;
     }
 </style>
 <script src="./popup.js" type="module"></script>
 
 <body>
     <h1>Theme list</h1>
+    <h3 id="error">error loading themes / oppening the plugin on a non pinterest page</h3>
 </body>
 
 </html>
