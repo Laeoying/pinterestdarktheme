@@ -13,9 +13,6 @@ if (!isPinterest) {
 
 // load themes
 const themes = await application.runtime.sendMessage({ type: 'getThemes' });
-console.log(themes);
-
-/*const themes = (await application.storage.local.get(['themes'])).themes;*/
 if (!themes) {
     let popupContent = document.getElementById('error');
     popupContent.innerHTML = 'Error loading themes :(';
