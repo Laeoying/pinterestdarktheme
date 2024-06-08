@@ -25,13 +25,12 @@ function loadThemes() {
 application.runtime.onMessage.addListener((request, sender, sendResponse) => {
     switch (request.type || '') {
         case 'getThemes':
-            console.log(themes);
             if (themes) {
                 sendResponse(themes);
                 break;
             }
             loadThemes().then(themes => {
-                sendResponse(themes[key]);
+                sendResponse(themes);
             });
             break;
         case 'getThemeByKey':
