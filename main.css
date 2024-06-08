@@ -1,3 +1,5 @@
+/* properties might not work in Firefox*/
+
 @property --pdt-d1 {
   syntax: '<color>';
   inherits: true;
@@ -40,23 +42,31 @@
   initial-value: rgb(120, 120, 120);
 }
 
-@property --ftr-bg {
+@property --pdt-f1 {
   syntax: '<filter>';
   inherits: true;
   initial-value: brightness(0);
 }
 
-@property --ftr-fg {
+@property --pdt-f2 {
   syntax: '<filter>';
   inherits: true;
   initial-value: brightness(8%);
 }
 
-body {
-  transition-property: --pdt-d1, --pdt-d2, --pdt-d3, --pdt-d4, --pdt-l1, --pdt-l2, --pdt-l3, --ftr-bg, --ftr-fg;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+:root {
+  --pdt-d1: black;
+  --pdt-d2: rgb(20, 20, 20);
+  --pdt-d3: rgb(30, 30, 30);
+  --pdt-l1: white;
+  --pdt-l2: rgb(160, 160, 160);
+  --pdt-l3: rgb(120, 120, 120);
+  --pdt-f1: brightness(10%);
+  --pdt-f2: brightness(20%);
+  background-color: var(--pdt-d1);
+}
 
+body {
   --g-colorSchemeName: darkMode;
   --color-text-default: var(--pdt-l1);
   --color-text-subtle: var(--pdt-l2);
@@ -142,7 +152,7 @@ body {
 
 /* More Ideas Board */
 div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
-  filter: var(--ftr-bg, brightness(10%));
+  filter: var(--pdt-f1, brightness(10%));
 }
 
 /* Seach Bar */
@@ -172,7 +182,11 @@ div[data-test-id="less-description-container"] {
   background-color: var(--color-background-box-default) !important;
 }
 
-div:has(>div >div >[data-test-id="visual-content-container"]) {
+div:has(> div > div >div > div[data-test-id="visual-content-container"]) {
+  border-radius: 32px;
+}
+
+div:has(> div[data-test-id="closeup-lego-container"]) {
   box-shadow: 0 1px 20px 0 rgb(from var(--pdt-l2) r g b / 10%) !important;
 }
 
@@ -206,7 +220,7 @@ div[data-test-id="shop-button"] {
 
 div[data-test-id="visual-search-cropper"] .v2cropperHandle,
 div[data-test-id="visual-search-cropper"] .v2cropSection {
-  filter: var(--ftr-bg, brightness(20%));
+  filter: var(--pdt-f1, brightness(20%));
 }
 
 /* Pin Creation */
