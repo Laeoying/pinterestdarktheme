@@ -98,6 +98,7 @@ body {
   --color-background-selected-base: var(--pdt-l1);
   --color-background-box-selected: var(--pdt-d4);
   --color-background-button-tertiary-hover: var(--pdt-d2);
+  --color-background-secondary-base: var(--pdt-d2);
   --color-text-dark: var(--pdt-l1);
   --color-border-container: var(--pdt-d3);
   --color-icon-dark: var(--pdt-l1);
@@ -155,6 +156,10 @@ div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
   filter: var(--pdt-f1, brightness(10%));
 }
 
+div:has(>div[data-root-margin="more-ideas-tabs"]) {
+    background-color: transparent !important;
+}
+
 /* Seach Bar */
 input[data-test-id="search-box-input"] {
   background-color: transparent !important;
@@ -162,6 +167,14 @@ input[data-test-id="search-box-input"] {
 
 #searchBoxContainer>div>div:nth-child(2) {
   background-color: var(--pdt-l3) !important;
+}
+
+div[data-test-id="dynamic-search-placeholder"]>div.QLY {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
+}
+
+div[data-test-id="dynamic-search-placeholder"]>div.ojN {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
 }
 
 /* Post */
@@ -182,16 +195,28 @@ div[data-test-id="less-description-container"] {
   background-color: var(--color-background-box-default) !important;
 }
 
-div:has(> div > div >div > div[data-test-id="visual-content-container"]) {
+div:has(>div>div>div>div[data-test-id="visual-content-container"]) {
   border-radius: 32px;
 }
 
-div:has(> div[data-test-id="closeup-lego-container"]) {
+div:has(>div[data-test-id="closeup-lego-container"]) {
   box-shadow: 0 1px 20px 0 rgb(from var(--pdt-l2) r g b / 10%) !important;
 }
 
 div[data-test-id="lego-share-social-bar-auth"] button {
   background-color: var(--pdt-d1) !important;
+}
+
+div[data-test-id="more-description-container"]>div.MIw {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--pdt-d1) 100%) !important;
+}
+
+div[data-test-id="peek-variant-shopping-module-container"]>div:last-child {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, var(--pdt-d1) 100%) !important;
+}
+
+div:has(>div[data-test-id="self-profile-header"]) {
+    background-color: var(--pdt-d1) !important;
 }
 
 /* Album Preview */
@@ -211,6 +236,10 @@ div[data-test-id="pinRepSelectionBorder"]:has(svg[height="24"]) {
 div[data-test-id="pinRepSelectionBorder"]:has(svg[height="12"]) {
   border-color: var(--pdt-l1) !important;
   box-shadow: var(--pdt-d1) 0px 0px 0px 3px inset !important;
+}
+
+div:has(>div>div>[data-test-id="visual-content-container"]) {
+    box-shadow: none !important;
 }
 
 /* Image Search */
@@ -251,7 +280,6 @@ textarea,
 }
 
 /* Settings */
-
 div:has(>div[data-test-id="homefeed-control-message-text"]) div[role="button"]>div>div>div:nth-child(2),
 div:has(>div >div >div >div[data-test-id="pin"])>div:nth-child(2) {
   background-color: rgb(from var(--pdt-l1) r g b / 10%) !important;
