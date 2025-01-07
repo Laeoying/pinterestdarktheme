@@ -80,8 +80,8 @@ body {
   --color-background-tabs-default-hover: var(--pdt-d3);
   --color-background-tabs-default-active: var(--pdt-d4);
   --color-border-popover-primary: var(--pdt-d1);
-  --color-background-popover-primary: var(--pdt-d2);
-  --color-background-box-secondary: var(--pdt-d3);
+  --color-background-popover-primary: var(--pdt-d1);
+  --color-background-box-secondary: var(--pdt-d2);
   --color-background-overlay: var(--pdt-d3);
   --color-background-box-darkwash: var(--pdt-d4);
   --color-background-button-white-default: var(--pdt-d3);
@@ -157,7 +157,19 @@ div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
 }
 
 div:has(>div[data-root-margin="more-ideas-tabs"]) {
-    background-color: transparent !important;
+  background-color: transparent !important;
+}
+
+div[data-root-margin="more-ideas-tabs"]>div>div>div {
+  transition: none !important;
+}
+
+div[data-root-margin="more-ideas-tabs"]>div>div>div>div>div:nth-child(2)>div.p6V {
+  background: linear-gradient(to left, var(--pdt-d1) 51.56%, rgba(255, 255, 255, 0) 100%) !important;
+}
+
+div[data-root-margin="more-ideas-tabs"]>div>div>div>div>div:nth-child(2)>div.Rym {
+  background: linear-gradient(to right, var(--pdt-d1) 51.56%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
 /* Seach Bar */
@@ -170,11 +182,11 @@ input[data-test-id="search-box-input"] {
 }
 
 div[data-test-id="dynamic-search-placeholder"]>div.QLY {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
 }
 
 div[data-test-id="dynamic-search-placeholder"]>div.ojN {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
 }
 
 /* Post */
@@ -208,15 +220,15 @@ div[data-test-id="lego-share-social-bar-auth"] button {
 }
 
 div[data-test-id="more-description-container"]>div.MIw {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--pdt-d1) 100%) !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--pdt-d1) 100%) !important;
 }
 
 div[data-test-id="peek-variant-shopping-module-container"]>div:last-child {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, var(--pdt-d1) 100%) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, var(--pdt-d1) 100%) !important;
 }
 
 div:has(>div[data-test-id="self-profile-header"]) {
-    background-color: var(--pdt-d1) !important;
+  background-color: var(--pdt-d1) !important;
 }
 
 /* Album Preview */
@@ -239,7 +251,7 @@ div[data-test-id="pinRepSelectionBorder"]:has(svg[height="12"]) {
 }
 
 div:has(>div>div>[data-test-id="visual-content-container"]) {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /* Image Search */
@@ -280,8 +292,7 @@ textarea,
 }
 
 /* Settings */
-div:has(>div[data-test-id="homefeed-control-message-text"]) div[role="button"]>div>div>div:nth-child(2),
-div:has(>div >div >div >div[data-test-id="pin"])>div:nth-child(2) {
+div:has(>div[data-test-id="homefeed-control-message-text"]) div[role="button"]>div>div>div:nth-child(2) {
   background-color: rgb(from var(--pdt-l1) r g b / 10%) !important;
 }
 
