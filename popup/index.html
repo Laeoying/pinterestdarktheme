@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: black;
+        font-family: 'Quicksand', sans-serif;
+        color: white;
+        text-align: center;
+        min-width: 220px;
+        min-height: 80px;
+        padding: 5px;
+    }
+
+    #themes-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .theme-container {
+        position: relative;
+        align-items: center;
+        height: 48px;
+        width: fill-available;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        border-radius: 8px;
+        margin: 10px;
+        border: 1px solid white;
+        outline: 1px solid white;
+        outline-offset: -1px;
+        transition: box-shadow 0.25s, outline-offset 0.1s;
+    }
+
+    .theme-container * {
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .theme-container input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .theme-container:has(input:hover) {
+        box-shadow: 0 0 10px 1px white;
+    }
+
+    .theme-container:has(input:checked) {
+        outline-offset: 3px;
+    }
+
+    .theme-name {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+    }
+
+    #error {
+        display: none;
+    }
+</style>
+<script src="./script.js" defer></script>
+
+<body>
+    <h1 id="title">Theme list</h1>
+    <div id="themes-list">
+        <!-- elements will be generated for each theme in js -->
+        <!-- element structure:
+        <div class='theme-container'>
+            <span class='theme-name'>theme name</span>
+            <input type='radio' name='theme'>
+        <div>
+        -->
+    </div>
+    <h3 id="error">error loading themes / oppening the plugin on a non pinterest page</h3>
+</body>
+
+</html>

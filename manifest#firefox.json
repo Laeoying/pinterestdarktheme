@@ -1,19 +1,23 @@
 {
     "manifest_version": 3,
     "name": "Pinterest DARK THEME",
-    "version": "2.3",
+    "version": "2.5",
     "description": "Apply a different themes to Pinterest web version.",
     "author": "Iris",
-    "icons": {
-        "128": "icon/128.png"
-    },
     "action": {
-        "default_popup": "popup/popup.html"
+        "default_popup": "popup/index.html",
+        "default_title": "Pinterest DARK THEME",
+        "default_icon": {
+            "16": "icon/16.png",
+            "32": "icon/32.png",
+            "48": "icon/48.png",
+            "128": "icon/128.png"
+        }
     },
     "permissions": [
-        "storage",
-        "tabs",
-        "alarms",
+        "storage"
+    ],
+    "host_permissions": [
         "https://*.pinterest.com/*",
         "https://*.pinterest.fr/*",
         "https://*.pinterest.de/*",
@@ -38,12 +42,6 @@
         "https://*.pinterest.ph/*",
         "https://*.pinterest.se/*"
     ],
-    "storage": {
-        "themes": "storage/themes.json"
-    },
-    "background": {
-        "service_worker": "themes.js"
-    },
     "content_scripts": [
         {
             "matches": [
@@ -97,12 +95,17 @@
                 "https://help.pinterest.se/*"
             ],
             "css": [
-                "main.css"
+                "main/style.css"
             ],
             "js": [
-                "main.js"
+                "main/script.js"
             ],
             "run_at": "document_start"
         }
-    ]
+    ],
+    "background": {
+        "scripts": [
+            "background/script.js"
+        ]
+    }
 }
