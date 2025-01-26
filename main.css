@@ -302,3 +302,9 @@ div[data-test-id="chat-window-container"] {
 .T3r {
   background: rgb(from var(--pdt-l1) r g b / 6.4%);
 }
+
+/* Search bar upper and bottom part */
+div.Lfz.MIw.ojN.zI7.iyn.Hsu,
+div.Lfz.MIw.QLY.zI7.iyn.Hsu{
+  background-image: none !important;
+}
