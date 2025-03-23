@@ -1,0 +1,257 @@
+  :root {
+      --pdt-d1: black;
+      --pdt-d2: rgb(20, 20, 20);
+      --pdt-d3: rgb(30, 30, 30);
+      --pdt-l1: white;
+      --pdt-l2: rgb(160, 160, 160);
+      --pdt-l3: rgb(120, 120, 120);
+      --pdt-f1: brightness(10%);
+      --pdt-f2: brightness(20%);
+      background-color: var(--pdt-d1);
+  }
+
+  body {
+      --g-colorSchemeName: darkMode;
+      --color-text-default: var(--pdt-l1);
+      --color-text-subtle: var(--pdt-l2);
+      --color-icon-subtle: var(--pdt-l2);
+      --color-icon-default: var(--pdt-l3);
+      --color-background-default: var(--pdt-d1);
+      --color-background-box-default: var(--pdt-d1);
+      --color-background-button-secondary-default: var(--pdt-d3);
+      --color-background-button-secondary-hover: var(--pdt-d4);
+      --color-background-tabs-default-base: var(--pdt-d1);
+      --color-background-tabs-default-hover: var(--pdt-d3);
+      --color-background-tabs-default-active: var(--pdt-d4);
+      --color-border-popover-primary: var(--pdt-d1);
+      --color-background-popover-primary: var(--pdt-d2);
+      --color-background-box-secondary: var(--pdt-d3);
+      --color-background-overlay: var(--pdt-d3);
+      --color-background-box-darkwash: var(--pdt-d4);
+      --color-background-button-white-default: var(--pdt-d3);
+      --color-background-button-white-hover: var(--pdt-d4);
+      --color-background-formfield-primary: var(--pdt-d3);
+      --color-background-combobox-item-hover: var(--pdt-d4);
+      --color-background-tag-primary-default: var(--pdt-d2);
+      --color-text-formfield-default: var(--pdt-l1);
+      --color-background-box-warning-weak: var(--pdt-d2);
+      --color-background-box-lightwash: var(--pdt-d3);
+      --color-background-box-light: var(--pdt-d3);
+      --color-background-switch-default-selected: var(--pdt-l1);
+      --color-background-switch-default-unselected: var(--pdt-d2);
+      --color-background-selected-base: var(--pdt-l1);
+      --color-background-box-selected: var(--pdt-d4);
+      --color-background-button-tertiary-hover: var(--pdt-d2);
+      --color-background-secondary-base: var(--pdt-d2);
+      --color-text-dark: var(--pdt-l1);
+      --color-border-container: var(--pdt-d3);
+      --color-icon-dark: var(--pdt-l1);
+      --color-background-datepicker-container: var(--pdt-d1);
+      --elevation-datepicker: 0 0 8px rgb(from var(--pdt-l1) r g b / 10%);
+      --color-background-formfield-primary: var(--pdt-d2);
+      --elevation-floating: 0 0 8px rgb(from var(--pdt-l2) r g b / 10%);
+      --color-background-mask-wash: rgb(from var(--pdt-l1) r g b / 4%);
+      --color-text-inverse: white;
+      --color-background-button-disabled-default: var(--pdt-d3);
+      background-color: var(--pdt-d1) !important;
+      z-index: 0;
+      color: var(--pdt-l1);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+      width: 13px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: var(--pdt-d3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: var(--pdt-d4);
+  }
+
+  ::-moz-scrollbar {
+      width: 13px;
+  }
+
+  ::-moz-scrollbar-track {
+      background: var(--pdt-d3);
+  }
+
+  ::-moz-scrollbar-thumb {
+      background: var(--pdt-d4);
+  }
+
+  ::-ms-scrollbar {
+      width: 13px;
+  }
+
+  ::-ms-scrollbar-track {
+      background: var(--pdt-d3);
+  }
+
+  ::-ms-scrollbar-thumb {
+      background: var(--pdt-d4);
+  }
+
+  /* More Ideas Board */
+  div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
+      filter: var(--pdt-f1, brightness(10%));
+  }
+
+  div:has(>div[data-root-margin="more-ideas-tabs"]) {
+      background-color: transparent !important;
+  }
+
+  /* Seach Bar */
+  input[data-test-id="search-box-input"] {
+      background-color: transparent !important;
+  }
+
+  #searchBoxContainer>div>div:nth-child(2) {
+      background-color: var(--pdt-l3) !important;
+  }
+
+  div[data-test-id="dynamic-search-placeholder"]>div.QLY {
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
+  }
+
+  div[data-test-id="dynamic-search-placeholder"]>div.ojN {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--pdt-d2)) !important;
+  }
+
+  /* Post */
+  div[data-test-id="closeup-title"] {
+      background: transparent;
+  }
+
+  div[data-test-id="inline-comment-composer-container"] {
+      border-color: var(--pdt-l3) !important;
+  }
+
+  div[data-test-id="pinrep-source-link"] {
+      background-color: var(--pdt-d3) !important;
+  }
+
+  div[data-test-id="more-description-container"],
+  div[data-test-id="less-description-container"] {
+      background-color: var(--color-background-box-default) !important;
+  }
+
+  div:has(>div>div>div>div[data-test-id="visual-content-container"]) {
+      border-radius: 32px;
+  }
+
+  div:has(>div[data-test-id="closeup-lego-container"]) {
+      box-shadow: 0 1px 20px 0 rgb(from var(--pdt-l2) r g b / 10%) !important;
+  }
+
+  div[data-test-id="lego-share-social-bar-auth"] button {
+      background-color: var(--pdt-d1) !important;
+  }
+
+  div[data-test-id="more-description-container"]>div.MIw {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--pdt-d1) 100%) !important;
+  }
+
+  div[data-test-id="peek-variant-shopping-module-container"]>div:last-child {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, var(--pdt-d1) 100%) !important;
+  }
+
+  div:has(>div[data-test-id="self-profile-header"]) {
+      background-color: var(--pdt-d1) !important;
+  }
+
+  /* Album Preview */
+  div[data-test-id="profile-board-card"] div,
+  div[data-test-id="pwt-grid-item"] div {
+      border-color: var(--pdt-d1) !important;
+  }
+
+  div[data-test-id="persistent-one-click-save"] div:has(>div >svg) {
+      background-color: var(--pdt-d2) !important;
+  }
+
+  div[data-test-id="pinRepSelectionBorder"]:has(svg[height="24"]) {
+      border-color: var(--pdt-d1) !important;
+  }
+
+  div[data-test-id="pinRepSelectionBorder"]:has(svg[height="12"]) {
+      border-color: var(--pdt-l1) !important;
+      box-shadow: var(--pdt-d1) 0px 0px 0px 3px inset !important;
+  }
+
+  div:has(>div>div>[data-test-id="visual-content-container"]) {
+      box-shadow: none !important;
+  }
+
+  /* Image Search */
+  div[data-test-id="shop-button"] {
+      background-color: rgb(from var(--color-background-box-default) r g b / 90%) !important;
+  }
+
+  div[data-test-id="visual-search-cropper"] .v2cropperHandle,
+  div[data-test-id="visual-search-cropper"] .v2cropSection {
+      filter: var(--pdt-f1, brightness(20%));
+  }
+
+  /* Pin Creation */
+  div[data-test-id="storyboard-selector-board"] button {
+      background-color: var(--pdt-d2) !important;
+  }
+
+  div[data-test-id="storyboard-selector-board"] button>div:not([data-test-id="board-dropdown-placeholder"]) span {
+      color: var(--pdt-l1) !important;
+  }
+
+  div:has(>div[data-test-id="editor-with-mentions"]) {
+      border-radius: var(--rounding-600);
+      color: var(--pdt-l1) !important;
+      background-color: var(--pdt-d2) !important;
+  }
+
+  div:has(>div[data-test-id="header-content-container"])>div:nth-child(3)>div>div>div:nth-child(2)>div:nth-child(2),
+  div:has(>div[data-test-id="header-content-container"])>div:nth-child(3)>div>div>div:nth-child(2)>div>div:nth-child(2) {
+      background-color: rgb(from var(--pdt-d1) r g b / 60%) !important;
+  }
+
+  input,
+  textarea,
+  #searchBoxContainer>div {
+      color: var(--pdt-l1) !important;
+      background-color: var(--pdt-d2) !important;
+  }
+
+  /* Settings */
+  div:has(>div[data-test-id="homefeed-control-message-text"]) div[role="button"]>div>div>div:nth-child(2),
+  div:has(>div >div >div >div[data-test-id="pin"])>div:nth-child(2) {
+      background-color: rgb(from var(--pdt-l1) r g b / 10%) !important;
+  }
+
+  select option {
+      background-color: var(--pdt-d1);
+  }
+
+  /* Messages */
+  div:has(>div[data-test-id="send-message-to-conversation"])>div:nth-child(2) {
+      background-color: var(--pdt-d2) !important;
+  }
+
+  div[data-test-id="chat-window-container"] {
+      box-shadow: rgb(from var(--pdt-l2) r g b / 10%) -3px 4px 14px 0px !important;
+  }
+
+  /* Pinterest Generics */
+  .T3r {
+      background: rgb(from var(--pdt-l1) r g b / 6.4%);
+  }
+    /*
+    THE FOLLOWING RULE SUCK
+    the only thing it does is putting the icons in white, THOUGH when you put back the white theme, it stays white so you can't see it
+    the thing is, the way the rule is made is weird since the svg is in a background-image url() and the fills are in the url
+    i have NO IDEA how to change this :(
+    */
+  .DUt.Jea.KS5.mQ8.zI7.iyn.Hsu { 
+    filter: invert(1);
+  }
