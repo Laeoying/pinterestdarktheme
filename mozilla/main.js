@@ -43,7 +43,6 @@ function setup() {
       });
     } else { // Set the saved theme if it exists
       setTheme(res.theme);
-      
     }
   });
 }
