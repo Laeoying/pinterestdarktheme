@@ -1,83 +1,83 @@
 {
-    "manifest_version": 3,
-    "name": "Pinterest DARK THEME",
-    "version": "2.3",
-    "description": "Apply a different themes to Pinterest web version.",
-    "author": "Iris, Filipermaster",
-    "icons": {
-        "128": "icon.png"
-    },
-    "action": {
-        "default_popup": "popup/popup.html"
-    },
-    "permissions": [
-        "storage"
-    ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*.pinterest.com/*",
-                "https://*.pinterest.fr/*",
-                "https://*.pinterest.de/*",
-                "https://*.pinterest.co.uk/*",
-                "https://*.pinterest.jp/*",
-                "https://*.pinterest.ru/*",
-                "https://*.pinterest.cn/*",
-                "https://*.pinterest.pt/*",
-                "https://*.pinterest.it/*",
-                "https://*.pinterest.es/*",
-                "https://*.pinterest.ca/*",
-                "https://*.pinterest.com.au/*",
-                "https://*.pinterest.at/*",
-                "https://*.pinterest.ch/*",
-                "https://*.pinterest.cl/*",
-                "https://*.pinterest.co.kr/*",
-                "https://*.pinterest.com.mx/*",
-                "https://*.pinterest.dk/*",
-                "https://*.pinterest.ie/*",
-                "https://*.pinterest.net/*",
-                "https://*.pinterest.nz/*",
-                "https://*.pinterest.ph/*",
-                "https://*.pinterest.se/*"
-            ],
-            "exclude_matches": [
-                "https://help.pinterest.com/*",
-                "https://help.pinterest.fr/*",
-                "https://help.pinterest.de/*",
-                "https://help.pinterest.co.uk/*",
-                "https://help.pinterest.jp/*",
-                "https://help.pinterest.ru/*",
-                "https://help.pinterest.cn/*",
-                "https://help.pinterest.pt/*",
-                "https://help.pinterest.it/*",
-                "https://help.pinterest.es/*",
-                "https://help.pinterest.ca/*",
-                "https://help.pinterest.com.au/*",
-                "https://help.pinterest.at/*",
-                "https://help.pinterest.ch/*",
-                "https://help.pinterest.cl/*",
-                "https://help.pinterest.co.kr/*",
-                "https://help.pinterest.com.mx/*",
-                "https://help.pinterest.dk/*",
-                "https://help.pinterest.ie/*",
-                "https://help.pinterest.net/*",
-                "https://help.pinterest.nz/*",
-                "https://help.pinterest.ph/*",
-                "https://help.pinterest.se/*"
-            ],
-            "css": [
-                "main.css"
-            ],
-            "js": [
-                "main.js"
-            ],
-            "run_at": "document_start"
-        }
-    ],
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "pinterestdarktheme@laeoying.com",
-            "strict_min_version": "91.0"
-        }
-    }
+	"manifest_version": 3,
+	"name": "Pinterest DARK THEME",
+	"version": "2.3",
+	"description": "Apply a different themes to Pinterest web version.",
+	"author": "Iris, Filipermaster",
+	"icons": {
+		"128": "icon.png"
+	},
+	"action": {
+		"default_popup": "popup/popup.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.pinterest.com/*",
+				"https://*.pinterest.fr/*",
+				"https://*.pinterest.de/*",
+				"https://*.pinterest.co.uk/*",
+				"https://*.pinterest.jp/*",
+				"https://*.pinterest.ru/*",
+				"https://*.pinterest.cn/*",
+				"https://*.pinterest.pt/*",
+				"https://*.pinterest.it/*",
+				"https://*.pinterest.es/*",
+				"https://*.pinterest.ca/*",
+				"https://*.pinterest.com.au/*",
+				"https://*.pinterest.at/*",
+				"https://*.pinterest.ch/*",
+				"https://*.pinterest.cl/*",
+				"https://*.pinterest.co.kr/*",
+				"https://*.pinterest.com.mx/*",
+				"https://*.pinterest.dk/*",
+				"https://*.pinterest.ie/*",
+				"https://*.pinterest.net/*",
+				"https://*.pinterest.nz/*",
+				"https://*.pinterest.ph/*",
+				"https://*.pinterest.se/*"
+			],
+			"exclude_matches": [
+				"https://help.pinterest.com/*",
+				"https://help.pinterest.fr/*",
+				"https://help.pinterest.de/*",
+				"https://help.pinterest.co.uk/*",
+				"https://help.pinterest.jp/*",
+				"https://help.pinterest.ru/*",
+				"https://help.pinterest.cn/*",
+				"https://help.pinterest.pt/*",
+				"https://help.pinterest.it/*",
+				"https://help.pinterest.es/*",
+				"https://help.pinterest.ca/*",
+				"https://help.pinterest.com.au/*",
+				"https://help.pinterest.at/*",
+				"https://help.pinterest.ch/*",
+				"https://help.pinterest.cl/*",
+				"https://help.pinterest.co.kr/*",
+				"https://help.pinterest.com.mx/*",
+				"https://help.pinterest.dk/*",
+				"https://help.pinterest.ie/*",
+				"https://help.pinterest.net/*",
+				"https://help.pinterest.nz/*",
+				"https://help.pinterest.ph/*",
+				"https://help.pinterest.se/*"
+			],
+			"css": [
+				"main.css"
+			],
+			"js": [
+				"main.js"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "pinterestdarktheme@laeoying.com",
+			"strict_min_version": "91.0"
+		}
+	}
 }

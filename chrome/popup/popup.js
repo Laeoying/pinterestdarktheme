@@ -73,11 +73,11 @@ function regularGradient(rotation, ...colors) { // Generate gradient CSS string
 	let gradient = 'linear-gradient(' + rotation + 'deg';
 
 	for (const id in colors) {
-			const color = colors[id];
-			const sperc = parseFloat(Number(id) / numColors * 100 + 0.25).toFixed(2) + '%';
-			const ePerc = parseFloat((Number(id) + 1) / numColors * 100 - 0.25).toFixed(2) + '%';
-			gradient += ', ' + color + ' ' + sperc;
-			gradient += ', ' + color + ' ' + ePerc;
+		const color = colors[id];
+		const sperc = parseFloat(Number(id) / numColors * 100 + 0.25).toFixed(2) + '%';
+		const ePerc = parseFloat((Number(id) + 1) / numColors * 100 - 0.25).toFixed(2) + '%';
+		gradient += ', ' + color + ' ' + sperc;
+		gradient += ', ' + color + ' ' + ePerc;
 	}
 
 	gradient += ')';
