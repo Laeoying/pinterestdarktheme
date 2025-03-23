@@ -3,21 +3,16 @@
     "name": "Pinterest DARK THEME",
     "version": "2.3",
     "description": "Apply a different themes to Pinterest web version.",
-    "author": "Iris",
+    "author": "Iris, Filipermaster",
     "icons": {
-        "128": "icon/128.png"
+        "128": "icon.png"
     },
     "action": {
         "default_popup": "popup/popup.html"
     },
     "permissions": [
-        "storage",
-        "tabs",
-        "alarms"
+        "storage"
     ],
-    "background": {
-        "scripts": ["themes.js"]
-    },
     "content_scripts": [
         {
             "matches": [
