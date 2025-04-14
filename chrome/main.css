@@ -5,8 +5,8 @@
 	--pdt-l1: white;
 	--pdt-l2: rgb(160, 160, 160);
 	--pdt-l3: rgb(120, 120, 120);
-	--pdt-f1: brightness(10%);
-	--pdt-f2: brightness(20%);
+	--pdt-white-to-d1: brightness(0%);
+	--pdt-black-to-l1: brightness(100%);
 	background-color: var(--pdt-d1);
 }
 
@@ -97,7 +97,7 @@ body {
 
 /* More Ideas Board */
 div:has(>.moreIdeasBoardRepCarousel)>div:nth-child(n + 3) {
-	filter: var(--pdt-f1, brightness(10%));
+	filter: var(--pdt-white-to-d1, brightness(10%));
 }
 
 div:has(>div[data-root-margin="more-ideas-tabs"]) {
@@ -193,7 +193,7 @@ div[data-test-id="shop-button"] {
 
 div[data-test-id="visual-search-cropper"] .v2cropperHandle,
 div[data-test-id="visual-search-cropper"] .v2cropSection {
-	filter: var(--pdt-f1, brightness(20%));
+	filter: var(--pdt-white-to-d1, brightness(20%));
 }
 
 /* Pin Creation */
@@ -247,12 +247,11 @@ div[data-test-id="chat-window-container"] {
 	background: rgb(from var(--pdt-l1) r g b / 6.4%);
 }
 
-/*
-  THE FOLLOWING RULE SUCK
-  the only thing it does is putting the icons in white, THOUGH when you put back the white theme, it stays white so you can't see it
-  the thing is, the way the rule is made is weird since the svg is in a background-image url() and the fills are in the url
-  i have NO IDEA how to change this :(
-*/
-.DUt.Jea.KS5.mQ8.zI7.iyn.Hsu {
-	filter: invert(1);
+/* New Sidebar */
+:is([data-test-id=home-tab], [data-test-id=create-tab], [aria-controls=news-feed-sidebar], [data-test-id=notifications-button], [data-test-id=vertical-nav-more-options-button]):hover > div {
+    background-color: var(--pdt-d3) !important;
+}
+
+:is([data-test-id=home-tab], [data-test-id=create-tab], [aria-controls=news-feed-sidebar], [data-test-id=notifications-button], [data-test-id=vertical-nav-more-options-button]) > div > div {
+    filter: var(--pdt-black-to-l1);
 }
