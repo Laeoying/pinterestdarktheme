@@ -256,3 +256,12 @@ div[data-test-id="chat-window-container"] {
 .DUt.Jea.KS5.mQ8.zI7.iyn.Hsu {
 	filter: invert(1);
 }
+
+/* --Quick fix 7/11/25-- */
+.imm, .ujU {
+	background-color: var(--pdt-d1);
+}
+
+.TJZ {
+	background-color: var(--pdt-d2);
+}
