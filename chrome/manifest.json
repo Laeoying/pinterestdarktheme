@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Pinterest DARK THEME",
-	"version": "2.4",
+	"version": "2.4.1",
 	"description": "Apply a different themes to Pinterest web version.",
 	"author": "Iris, Filipermaster",
 	"icons": {

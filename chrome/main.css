@@ -258,10 +258,11 @@ div[data-test-id="chat-window-container"] {
 }
 
 /* --Quick fix 7/11/25-- */
+/* !important required for Chrome for some reasons */
 .imm, .ujU {
-	background-color: var(--pdt-d1);
+	background-color: var(--pdt-d1) !important;
 }
 
 .TJZ {
-	background-color: var(--pdt-d2);
+	background-color: var(--pdt-d2) !important;
 }
