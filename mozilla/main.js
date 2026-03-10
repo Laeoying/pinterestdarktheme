@@ -41,6 +41,12 @@ function setup() {
 			});
 		} else { // Set the saved theme if it exists
 			setTheme(res.theme);
+			const interval = setInterval(() => { // On loading, Pinterest remove my <style> in a weird way, that's the only working solution I found
+				if (!document.getElementById('pdt-style')) {
+					setTheme(res.theme);
+					clearInterval(interval);
+				}
+			}, 50);
 		}
 	});
 }
