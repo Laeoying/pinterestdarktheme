@@ -7,31 +7,7 @@ const themes = {
 		"d4": "rgb(50, 50, 50)",
 		"l1": "white",
 		"l2": "rgb(160, 160, 160)",
-		"l3": "rgb(120, 120, 120)",
-		"white_to_d1": "brightness(0)",
-		"white_to_d2": "brightness(8%)"
-	},
-	"White": {
-		"d1": "white",
-		"d2": "rgb(240, 240, 240)",
-		"d3": "rgb(230, 230, 230)",
-		"d4": "rgb(210, 210, 210)",
-		"l1": "black",
-		"l2": "rgb(80, 80, 80)",
-		"l3": "rgb(40, 40, 40)",
-		"white_to_d1": "brightness(100%)",
-		"white_to_d2": "brightness(94%)"
-	},
-	"Semi-dark Purple": {
-		"d1": "#2c1f3e",
-		"d2": "#413451",
-		"d3": "#564a65",
-		"d4": "#6c6279",
-		"l1": "white",
-		"l2": "#9b93a4",
-		"l3": "#837a8e",
-		"white_to_d1": "sepia(100%) saturate(10000%) hue-rotate(183.3deg) brightness(37.5%) contrast(205%)",
-		"white_to_d2": "sepia(100%) saturate(10000%) hue-rotate(183.3deg) brightness(40%) contrast(181%)"
+		"l3": "rgb(120, 120, 120)"
 	},
 	"Dark Purple": {
 		"d1": "#1b1721",
@@ -40,9 +16,7 @@ const themes = {
 		"d4": "#5e5b63",
 		"l1": "white",
 		"l2": "#908e94",
-		"l3": "#77747b",
-		"white_to_d1": "sepia(100%) saturate(10000%) hue-rotate(183deg) brightness(20%) contrast(123%)",
-		"white_to_d2": "sepia(100%) saturate(10000%) hue-rotate(182.5deg) brightness(24%) contrast(110.1%)"
+		"l3": "#77747b"
 	},
 	"Dark Grey": {
 		"d1": "#181818",
@@ -51,9 +25,7 @@ const themes = {
 		"d4": "#5b5b5b",
 		"l1": "white",
 		"l2": "#8f8f8f",
-		"l3": "#747474",
-		"white_to_d1": "brightness(9.5%)",
-		"white_to_d2": "brightness(17.5%)"
+		"l3": "#747474"
 	},
 	"Dark Blue": {
 		"d1": "#191926",
@@ -62,9 +34,70 @@ const themes = {
 		"d4": "#5d5c67",
 		"l1": "white",
 		"l2": "#908f97",
-		"l3": "#76757e",
-		"white_to_d1": "sepia(100%) saturate(10000%) hue-rotate(180deg) brightness(24.1%) contrast(136.2%)",
-		"white_to_d2": "sepia(100%) saturate(10000%) hue-rotate(180deg) brightness(28%) contrast(123%)"
+		"l3": "#76757e"
+	},
+	"Dark Cherry": {
+		"d1": "#2e0712",
+		"d2": "#590D22",
+		"d3": "#800F2F",
+		"d4": "#A4133C",
+		"l1": "#FFF0F3",
+		"l2": "#FFB3C1",
+		"l3": "#FF8FA3"
+	},
+	"Dark Lavender": {
+		"d1": "#332c39",
+		"d2": "#3f3649",
+		"d3": "#42365d",
+		"d4": "#573d7f",
+		"l1": "#ebe0ff",
+		"l2": "#dac7ff",
+		"l3": "#c7adff"
+	},
+	"White": {
+		"d1": "white",
+		"d2": "rgb(240, 240, 240)",
+		"d3": "rgb(230, 230, 230)",
+		"d4": "rgb(210, 210, 210)",
+		"l1": "black",
+		"l2": "rgb(80, 80, 80)",
+		"l3": "rgb(40, 40, 40)"
+	},
+	"Autumn": {
+		"d1": "#ede0d4",
+		"d2": "#e6ccb2",
+		"d3": "#ddb892",
+		"d4": "#b08968",
+		"l1": "#402B1D",
+		"l2": "#7f5539",
+		"l3": "#9c6644"
+	},
+	"Light Green": {
+		"d1": "#B7EFC5",
+		"d2": "#92E6A7",
+		"d3": "#6EDE8A",
+		"d4": "#4AD66D",
+		"l1": "#10451D",
+		"l2": "#155D27",
+		"l3": "#1A7431"
+	},
+	"Light Cherry": {
+		"d1": "#FFF0F3",
+		"d2": "#FFCCD5",
+		"d3": "#FFB3C1",
+		"d4": "#FF8FA3",
+		"l1": "#590D22",
+		"l2": "#800F2F",
+		"l3": "#A4133C"
+	},
+	"Light Lavender": {
+		"d1": "#ebe0ff",
+		"d2": "#dac7ff",
+		"d3": "#c7adff",
+		"d4": "#ac8bee",
+		"l1": "#3f3649",
+		"l2": "#42365d",
+		"l3": "#573d7f"
 	}
 }
 

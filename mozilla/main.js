@@ -34,9 +34,7 @@ function setup() {
 				"d4": "rgb(50, 50, 50)",
 				"l1": "white",
 				"l2": "rgb(160, 160, 160)",
-				"l3": "rgb(120, 120, 120)",
-				"white_to_d1": "brightness(0)",
-				"white_to_d2": "brightness(8%)"
+				"l3": "rgb(120, 120, 120)"
 			};
 			chrome.storage.local.set({ theme: defaultTheme }, () => {
 				setTheme(defaultTheme);

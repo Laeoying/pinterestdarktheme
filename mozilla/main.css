@@ -5,8 +5,6 @@
 	--pdt-l1: white;
 	--pdt-l2: rgb(160, 160, 160);
 	--pdt-l3: rgb(120, 120, 120);
-	--pdt-f1: brightness(10%);
-	--pdt-f2: brightness(20%);
 	background-color: var(--pdt-d1);
 }
 
