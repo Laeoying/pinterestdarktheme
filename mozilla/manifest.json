@@ -76,8 +76,11 @@
 	],
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "pinterestdarktheme@laeoying.com",
-			"strict_min_version": "91.0"
+			"id": "pinterestdarktheme@sundance.ovh",
+			"strict_min_version": "107.0",
+			"data_collection_permissions": {
+				"required": ["none"]
+			}
 		}
 	}
 }
