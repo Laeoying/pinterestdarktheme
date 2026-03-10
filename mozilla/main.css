@@ -12,23 +12,31 @@
 
 body {
 	--g-colorSchemeName: darkMode;
-	--color-text-default: var(--pdt-l1);
-	--color-text-subtle: var(--pdt-l2);
+	--sema-color-text-default: var(--pdt-l1);
+	--sema-color-text-subtle: var(--pdt-l2);
+	--sema-color-text-dark: var(--pdt-l1);
 	--color-icon-subtle: var(--pdt-l2);
-	--color-icon-default: var(--pdt-l3);
-	--color-background-default: var(--pdt-d1);
+	--sema-color-icon-default: var(--pdt-l3);
+	--sema-color-background-default: var(--pdt-d1);
+	--sema-color-background-secondary: var(--pdt-d3);
+	--sema-color-background-wash-light: var(--pdt-d1);
 	--color-background-box-default: var(--pdt-d1);
-	--color-background-button-secondary-default: var(--pdt-d3);
-	--color-background-button-secondary-hover: var(--pdt-d4);
+	--comp-button-color-background-secondary-default: var(--pdt-d3);
+	--comp-button-color-background-tertiary-default: var(--pdt-d2);
+	--base-color-grayscale-100: var(--pdt-d3);
+	--comp-button-color-hover-background-secondary-default: var(--pdt-d4);
+	--comp-button-color-hover-background-tertiary-default: var(--pdt-d4);
 	--color-background-tabs-default-base: var(--pdt-d1);
 	--color-background-tabs-default-hover: var(--pdt-d3);
 	--color-background-tabs-default-active: var(--pdt-d4);
 	--color-border-popover-primary: var(--pdt-d1);
 	--color-background-popover-primary: var(--pdt-d2);
+	--sema-color-background-elevation: var(--pdt-d3);
 	--color-background-box-secondary: var(--pdt-d3);
 	--color-background-overlay: var(--pdt-d3);
 	--color-background-box-darkwash: var(--pdt-d4);
 	--color-background-button-white-default: var(--pdt-d3);
+	--sema-color-hover-background-secondary: var(--pdt-d4);
 	--color-background-button-white-hover: var(--pdt-d4);
 	--color-background-formfield-primary: var(--pdt-d3);
 	--color-background-combobox-item-hover: var(--pdt-d4);
@@ -257,9 +265,19 @@ div[data-test-id="chat-window-container"] {
 	filter: invert(1);
 }
 
+/* --Quick fix 22/11/25-- */
+div:has(> div[data-root-margin="more-ideas-tabs"]){
+	background-color: var(--pdt-d1) !important;
+}
+div:has(> div[data-test-id="editor-with-mentions"]){
+	background-color: transparent !important;
+}
 
+.mJ2PyB{
+	border-color: var(--pdt-d1) !important;
+}
 /* --Quick fix 7/11/25-- */
-.imm, .ujU {
+.imm, .ujU{
 	background-color: var(--pdt-d1);
 }
 
