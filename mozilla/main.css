@@ -136,3 +136,7 @@ div[data-test-id="comment-body-scrolling-divider"],
 	{
 	border-color: var(--pdt-d3) !important;
 }
+
+#dweb-comment-editor-container { /* Comments & pin creation bio text input */
+	color: var(--pdt-l1) !important;
+}
