@@ -137,6 +137,10 @@ div[data-test-id="comment-body-scrolling-divider"],
 	border-color: var(--pdt-d3) !important;
 }
 
-#dweb-comment-editor-container { /* Comments & pin creation bio text input */
+#dweb-comment-editor-container, #messageDraft { /* Comments & pin creation bio text input, Messages input */
 	color: var(--pdt-l1) !important;
+}
+
+div.ADXRXN.BVzdUh._xSIdT.gEQpi5 {
+	background-color: var(--pdt-d2);
 }
