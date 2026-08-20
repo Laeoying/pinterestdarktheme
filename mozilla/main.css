@@ -42,6 +42,7 @@ body {
 	--sema-color-background-default: var(--pdt-d1);
 	--sema-color-background-secondary: var(--pdt-d3);
 	--sema-color-background-wash-light: var(--pdt-d1);
+	--sema-color-background-elevated-opaque-default: var(--pdt-d1);
 	--color-background-combobox-item-hover: var(--pdt-d4);
 	--color-background-button-tertiary-hover: var(--pdt-d2);
 	--color-background-button-white-hover: var(--pdt-d4);
