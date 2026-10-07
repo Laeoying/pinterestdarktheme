@@ -1,0 +1,70 @@
+
+@font-face {
+	font-family: Quicksand;
+	src: url(../assets/quicksand.ttf);
+}
+
+body {
+    width: 700px;
+    font-family: Quicksand;
+    font-weight: 500;
+    background-color: rgb(34, 36, 52);
+    color: rgb(235, 234, 243);
+    text-align: center;
+}
+
+main > div {
+    padding: 10px;
+    border-radius: 15px;
+    border: dashed white 2px;
+}
+
+#presets > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.box:hover, input:hover {
+    transform: scale(105%);
+}
+
+#advanced > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#advanced, footer {
+    margin-top: 30px;
+}
+
+h1 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 10px;
+}
+
+a {
+    color: rgb(218, 251, 255);
+}
+
+input {
+    background-color: rgb(47, 42, 69);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 5px;
+}

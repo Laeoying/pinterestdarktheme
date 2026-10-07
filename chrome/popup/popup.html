@@ -2,42 +2,40 @@
 <html>
 
 <head>
-	<style>
-		body {
-			background-color: black;
-			font-family: 'Quicksand', sans-serif;
-			color: white;
-			text-align: center;
-			min-width: 220px;
-			min-height: 80px;
-			padding: 5px;
-		}
-
-		.box {
-			width: 200px;
-			height: 40px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 5px;
-			transition-duration: 0.2s;
-			border: solid white 2px;
-			cursor: pointer;
-			user-select: none;
-			font-size: 1.3em;
-			margin: 10px;
-		}
-
-		.box:hover {
-			box-shadow: 0 0 10px 1px white;
-		}
-	</style>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="popup.css">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 
 <body>
-	<h1>Theme list</h1>
-	<p>PLEASE ENABLE JAVASCRIPT TO MAKE THE THEME LIST APPEAR.</p>
+	<main>
+		<div id="presets">
+			<h1>Presets</h1>
+			<div></div>
+		</div>
+		<div id="advanced">
+			<h1>Advanced</h1>
+			<span>The colours are listed from most frequently used to least frequently used.</span>
+			<div>
+				<div>
+					<h2>Background colors</h2>
+					<input type="color" name="d1" id="d1">
+					<input type="color" name="d2" id="d2">
+					<input type="color" name="d3" id="d3">
+					<input type="color" name="d4" id="d4">
+				</div>
+				<div>
+					<h2>Text colors</h2>
+					<input type="color" name="l1" id="l1">
+					<input type="color" name="l2" id="l2">
+					<input type="color" name="l3" id="l3">
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<span>Made with ♥ · Privacy friendly · <a href="https://github.com/Laeoying/pinterestdarktheme" target="_blank">Source code</a></span>
+	</footer>
+	<noscript>Enable JS to change default theme.</noscript>
 	<script src="popup.js"></script>
 </body>
 
