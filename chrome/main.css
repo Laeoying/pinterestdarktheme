@@ -81,6 +81,11 @@ body {
 	--elevation-datepicker: 0 0 8px rgb(from var(--pdt-l1) r g b / 10%);
 	--elevation-floating: 0 0 8px rgb(from var(--pdt-l2) r g b / 10%);
 	--base-color-grayscale-100: var(--pdt-d3);
+
+	--comp-iconbutton-color-icon-transparent-dark-gray-icon-enabled-deselected: var(--pdt-l1);
+    --comp-button-color-icon-transparent-default: var(--pdt-l1);
+    --comp-iconbutton-color-icon-white-enabled-deselected: var(--pdt-l1);
+    --comp-iconbutton-color-background-white-enabled-deselected: var(--pdt-d2);
 }
 
 /* Scrollbar */
