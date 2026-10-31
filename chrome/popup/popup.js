@@ -101,13 +101,7 @@ const themes = {
 	}
 }
 
-function sendMessage(msg) {
-	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, msg, console.log(response));
-	});
-}
-
-function regularGradient(rotation, ...colors) {
+function regularGradient(rotation, ...colors) { // Generate gradient CSS string
 	const numColors = colors.length;
 	let gradient = 'linear-gradient(' + rotation + 'deg';
 
@@ -123,22 +117,17 @@ function regularGradient(rotation, ...colors) {
 	return gradient;
 }
 
-function sendTheme(theme) {
+function sendTheme(theme) { // Send a message to the active tab to change theme
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, { name: 'all', value: themes[theme] });
+		chrome.tabs.sendMessage(tabs[0].id, { theme: themes[theme] });
 	});
 }
 
 function setup() {
-	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, { name: 'get-theme' }, function (response) {
-			for (const elm in response.theme) {
-				document.querySelector(`input#${elm}`).value = response.theme[elm]
-			}
-		});
-	});
+	document.querySelector('p').remove(); // Remove the message that says enable JavaScript
 
-	for (const [key, theme] of Object.entries(themes)) {
+	for (const [key, theme] of Object.entries(themes)) { // Create the theme list
+
 		const div = document.createElement('div');
 		div.classList.add('box');
 		div.textContent = key;
@@ -149,24 +138,9 @@ function setup() {
 			chrome.storage.local.set({ theme: theme }, () => {
 				sendTheme(key);
 			});
-			for (const elm in theme) {
-				document.querySelector(`input#${elm}`).value = theme[elm]
-			}
 		})
 
-		document.querySelector('#presets > div').appendChild(div);
-	}
-	for (const elm of document.querySelectorAll('input')) {
-		elm.addEventListener('input', (e) => {
-			chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, { name: e.target.id, value: e.target.value });
-			});
-		})
-		elm.addEventListener('change', (e) => {
-			chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, { name: 'update' });
-			});
-		})
+		document.body.appendChild(div);
 	}
 }
 

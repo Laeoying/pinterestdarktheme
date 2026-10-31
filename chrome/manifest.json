@@ -1,11 +1,11 @@
 {
 	"manifest_version": 3,
 	"name": "Pinterest - LIGHT & DARK THEMES",
-	"version": "3.0",
+	"version": "2.6.3",
 	"description": "Apply different themes to Pinterest web version.",
 	"author": "Iris, Filipermaster, maguzzz",
 	"icons": {
-		"128": "assets/icon.png"
+		"128": "icon.png"
 	},
 	"action": {
 		"default_popup": "popup/popup.html"
